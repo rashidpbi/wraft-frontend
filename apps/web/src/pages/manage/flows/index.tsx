@@ -32,7 +32,10 @@ const Index: FC = () => {
             />
           }>
           {hasPermission('flow', 'manage') && (
-            <Button variant="tertiary" onClick={() => setIsOpen(true)}>
+            <Button
+              variant="tertiary"
+              onClick={() => setIsOpen(true)}
+              data-id="add-flow-button">
               Add Flow
             </Button>
           )}

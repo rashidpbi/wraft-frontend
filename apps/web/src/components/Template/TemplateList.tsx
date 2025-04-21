@@ -173,7 +173,8 @@ const TemplateList = () => {
         {hasPermission('template', 'manage') && (
           <Button
             onClick={() => router.push(`/templates/new`)}
-            variant="tertiary">
+            variant="tertiary"
+            data-id="create-template">
             <Plus size={12} weight="bold" />
             New Template
           </Button>

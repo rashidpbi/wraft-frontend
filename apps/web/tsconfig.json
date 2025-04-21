@@ -25,7 +25,8 @@
     "experimentalDecorators": true,
     "strictNullChecks": true,
     "noImplicitAny": true,
-    "noUnusedLocals": false
+    "noUnusedLocals": false,
+    "types": ["cypress", "node"],
   },
   "exclude": ["node_modules", "__tests__"],
   "include": [

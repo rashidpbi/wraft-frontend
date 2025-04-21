@@ -312,6 +312,7 @@ const LayoutForm = ({ setOpen, setRerender, cId = '', step = 0 }: Props) => {
           <>
             <Field label="Name" required error={errors?.name?.message}>
               <InputText
+                data-id="input-layout-name"
                 {...register('name')}
                 placeholder="Enter a Layout Name"
               />
@@ -326,7 +327,8 @@ const LayoutForm = ({ setOpen, setRerender, cId = '', step = 0 }: Props) => {
                   label="Slug"
                   required
                   hint="Slugs are layout templates used for rendering documents"
-                  error={errors?.slug?.message}>
+                  error={errors?.slug?.message}
+                  data-id="slug-layout-items-field">
                   <Select {...field} options={SLUGITEMS} />
                 </Field>
               )}
@@ -337,6 +339,7 @@ const LayoutForm = ({ setOpen, setRerender, cId = '', step = 0 }: Props) => {
               required
               error={errors?.description?.message}>
               <Textarea
+                data-id="input-layout-description"
                 {...register('description')}
                 placeholder="Enter a description"
               />
@@ -447,13 +450,18 @@ const LayoutForm = ({ setOpen, setRerender, cId = '', step = 0 }: Props) => {
           </Button>
         )}
 
-        {formStep === 0 && <Button onClick={nextStep}>Next</Button>}
+        {formStep === 0 && (
+          <Button onClick={nextStep} data-id="layout-next-button">
+            Next
+          </Button>
+        )}
         {formStep === 1 && (
           <Button
             type="submit"
             variant="primary"
             loading={isLoading}
-            onClick={() => handleSubmit(onSubmit)}>
+            onClick={() => handleSubmit(onSubmit)}
+            data-id="create-layout-submit">
             {isEdit ? 'Update' : 'Create'}
           </Button>
         )}

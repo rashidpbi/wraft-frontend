@@ -211,6 +211,7 @@ const ThemeAddForm = ({ setIsOpen, setRerender }: Props) => {
               required
               error={errors?.name?.message as string}>
               <InputText
+                data-id="input-theme-name"
                 {...register('name')}
                 placeholder="Enter a Layout Name"
               />
@@ -220,7 +221,7 @@ const ThemeAddForm = ({ setIsOpen, setRerender }: Props) => {
             <Label>Font</Label>
             <FontList assets={assets} onDelete={deleteAsset} />
 
-            <Box mt="sm">
+            <Box mt="sm" data-id="theme-add-font">
               <Button
                 size="sm"
                 onClick={(e) => {
@@ -289,6 +290,7 @@ const ThemeAddForm = ({ setIsOpen, setRerender }: Props) => {
         </Flex>
         <Box flexShrink="0" px="xl" py="md" gap="sm">
           <Button
+            data-id="theme-create-btn"
             disabled={(assets && assets.length < 2) || !isValid}
             type="submit">
             {isEdit ? 'Update' : 'Create'}
@@ -307,7 +309,7 @@ const ThemeAddForm = ({ setIsOpen, setRerender }: Props) => {
                 e.preventDefault();
                 setIsFontOpen(false);
               }}>
-              <CloseIcon color="#2C3641" />
+              <CloseIcon color="#2C3641" data-id="modal-close" />
             </Box>
           </Flex>
           <Box w="518px">

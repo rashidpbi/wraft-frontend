@@ -114,6 +114,7 @@ const Sidebar = (props: any) => {
                     </Flex>
                     {showFull && (
                       <Text
+                        data-id="sidebar-item"
                         color={
                           checkActive(pathname, path)
                             ? rawColors?.green?.[1200]

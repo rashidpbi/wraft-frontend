@@ -126,6 +126,7 @@ const Dropzone = ({
           name="file"
           sx={{ display: 'none' }}
           {...getInputProps({})}
+          data-id="upload-file"
         />
         {!assets && (
           <Box

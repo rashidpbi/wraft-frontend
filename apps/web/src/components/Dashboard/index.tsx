@@ -101,7 +101,11 @@ const Dashboard = () => {
       <Text color="text-secondary" fontSize="sm">
         {format(currentTime, 'EEEE, MMMM dd')}
       </Text>
-      <Text fontWeight="heading" mb="xl" color="text-primary">
+      <Text
+        fontWeight="heading"
+        mb="xl"
+        color="text-primary"
+        data-id="user-name">
         {getGreeting()}, {userProfile?.name}
       </Text>
       <Flex my="lg" display="none" border="1px solid" borderColor="border">

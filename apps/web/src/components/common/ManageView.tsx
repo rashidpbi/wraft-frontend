@@ -37,7 +37,9 @@ const ManageHomePage = () => {
                 p="md">
                 <Box>{menu.icon}</Box>
                 <Box pl={3} pr={2}>
-                  <Text fontWeight="heading">{menu.name}</Text>
+                  <Text fontWeight="heading" data-id="menu-item">
+                    {menu.name}
+                  </Text>
                   <Text color="text-secondary">{menu.desc}</Text>
                 </Box>
               </Flex>

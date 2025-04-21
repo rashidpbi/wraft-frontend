@@ -429,7 +429,10 @@ const TemplateEditor = () => {
               </Box>
             </Flex>
             <Flex borderTop="solid 1px" borderColor="border" py="md" gap="sm">
-              <Button variant="primary" onClick={() => onSaveTemplate()}>
+              <Button
+                variant="primary"
+                onClick={() => onSaveTemplate()}
+                data-id="create-template-save">
                 Save
               </Button>
               <Button variant="secondary" onClick={() => onCancelSetup()}>

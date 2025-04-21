@@ -395,6 +395,7 @@ const FlowForm = ({ setOpen, setRerender }: Props) => {
               <InputText
                 {...register('name')}
                 placeholder="Enter a Layout Name"
+                data-id="input-flow-name"
               />
             </Field>
           </Flex>
@@ -410,7 +411,8 @@ const FlowForm = ({ setOpen, setRerender }: Props) => {
             <Button
               variant="secondary"
               type="button"
-              onClick={() => AddState()}>
+              onClick={() => AddState()}
+              data-id="add-flow-btn">
               <AddIcon width={14} height={14} />
               <Text>Add Flow Step</Text>
             </Button>
@@ -428,7 +430,8 @@ const FlowForm = ({ setOpen, setRerender }: Props) => {
                 } else {
                   next();
                 }
-              }}>
+              }}
+              data-id="flow-next-button">
               Next
             </Button>
           )}

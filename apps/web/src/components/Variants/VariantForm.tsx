@@ -390,6 +390,7 @@ const VariantForm = ({ step = 0, setIsOpen, setRerender }: Props) => {
               <InputText
                 {...register('name')}
                 placeholder="Enter a Variant Name"
+                data-id="variant-drawer-name"
               />
             </Field>
 
@@ -400,6 +401,7 @@ const VariantForm = ({ step = 0, setIsOpen, setRerender }: Props) => {
               <Textarea
                 {...register('description')}
                 placeholder="Enter a description"
+                data-id="variant-drawer-description"
               />
             </Field>
             <Controller
@@ -415,6 +417,7 @@ const VariantForm = ({ step = 0, setIsOpen, setRerender }: Props) => {
                     options={TYPES}
                     placeholder="Select Document Type"
                     required
+                    data-id="slug-variant-drawer-items-field"
                   />
                 </Field>
               )}
@@ -424,7 +427,11 @@ const VariantForm = ({ step = 0, setIsOpen, setRerender }: Props) => {
               required
               error={errors.prefix?.message}
               hint="Enter a unique prefix for identification (e.g., SDM)">
-              <InputText {...register('prefix')} placeholder="Enter a prefix" />
+              <InputText
+                {...register('prefix')}
+                placeholder="Enter a prefix"
+                data-id="variant-drawer-prefix"
+              />
             </Field>
           </>
         )}
@@ -554,11 +561,17 @@ const VariantForm = ({ step = 0, setIsOpen, setRerender }: Props) => {
           </Button>
         )}
         {formStep < 2 ? (
-          <Button type="button" onClick={nextStep}>
+          <Button
+            type="button"
+            onClick={nextStep}
+            data-id="variant-drawer-next">
             Next
           </Button>
         ) : (
-          <Button type="submit" onClick={() => handleSubmit(onSubmit)}>
+          <Button
+            type="submit"
+            onClick={() => handleSubmit(onSubmit)}
+            data-id="variant-drawer-submit">
             {contentId ? 'Update' : 'Create'}
           </Button>
         )}

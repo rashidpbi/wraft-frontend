@@ -119,6 +119,13 @@ const LoginForm = () => {
     }
   }, [accessToken]);
 
+  const onInputClick = () => {
+    console.log('email clicked');
+  };
+
+  const getCookie = () => {
+    console.log('get cookie');
+  };
   return (
     <>
       {isGoogleAuthEnabled && (
@@ -151,6 +158,7 @@ const LoginForm = () => {
               <InputText
                 {...register('email')}
                 placeholder="Enter your email address"
+                onClick={onInputClick}
               />
             </Field>
 

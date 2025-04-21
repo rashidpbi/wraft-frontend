@@ -47,7 +47,8 @@ const FieldForm = ({ fieldtypes, trigger, control, register, errors }: any) => {
                   <Field
                     label="Field Type"
                     required
-                    error={errors?.fields?.[index]?.type?.message}>
+                    error={errors?.fields?.[index]?.type?.message}
+                    data-id="variant-field-type">
                     <Select
                       name={name}
                       value={value}

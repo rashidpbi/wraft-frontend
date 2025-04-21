@@ -33,7 +33,10 @@ const Index: FC = () => {
             />
           }>
           {hasPermission('layout', 'manage') && (
-            <Button variant="secondary" onClick={() => setIsOpen(true)}>
+            <Button
+              variant="secondary"
+              onClick={() => setIsOpen(true)}
+              data-id="add-layout-button">
               + Add Layout
             </Button>
           )}
